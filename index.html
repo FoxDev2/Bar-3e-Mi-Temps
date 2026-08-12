@@ -1,0 +1,430 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Restaurant 3ème MI-TEMPS - Kpalimé Kpodzi</title>
+
+    <!-- Google Fonts pour une typographie moderne et lisible -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- ==========================================================================
+       EN-TÊTE / NAVIGATION
+       ========================================================================== -->
+    <header>
+      <div class="container">
+        <a href="#accueil" class="logo">
+          3<sup>ème</sup> <span>MI-TEMPS</span>
+        </a>
+
+        <!-- Checkbox pour le menu burger (Sans JS) -->
+        <input
+          type="checkbox"
+          id="nav-toggle"
+          class="nav-toggle"
+          aria-label="Ouvrir le menu"
+        />
+
+        <label
+          for="nav-toggle"
+          class="hamburger"
+          aria-label="Menu de navigation"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+
+        <nav class="nav-links">
+          <a href="#accueil">Accueil</a>
+          <a href="#a-propos">À propos</a>
+          <a href="#services">Services</a>
+          <a href="#catalogue">Catalogue</a>
+          <a href="#avis">Avis</a>
+          <a href="#contacts">Contacts</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- ==========================================================================
+       SECTION ACCUEIL (HERO)
+       ========================================================================== -->
+    <section id="accueil">
+      <div class="container">
+        <div class="hero-content">
+          <h1>3<sup>ème</sup> MI-TEMPS <span>KPALIMÉ</span></h1>
+          <p>
+            Le point de rencontre incontournable à Kpodzi. Venez savourer nos
+            grillades et vous rafraîchir avec une PILS bien glacée dans une
+            ambiance conviviale et authentique.
+          </p>
+          <div class="hero-buttons">
+            <a href="#catalogue" class="btn btn-primary">Découvrir le Menu</a>
+            <a href="#contacts" class="btn btn-secondary">Nous Trouver</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+       SECTION À PROPOS
+       ========================================================================== -->
+    <section id="a-propos">
+      <div class="container">
+        <div class="section-title">
+          <h2>À Propos de Nous</h2>
+          <p>L'authenticité togolaise au cœur de Kpodzi</p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-text">
+            <h3>Le coin idéal après l'effort</h3>
+            <p>
+              Situé dans le charmant quartier de Kpodzi à Kpalimé, le restaurant
+              <strong>3ème MI-TEMPS</strong> est pensé comme le prolongement
+              parfait de vos moments de détente. Que ce soit après un match de
+              football, une longue journée de travail ou une balade dans les
+              collines, notre espace vous accueille à bras ouverts.
+            </p>
+            <p>
+              Nous faisons honneur aux traditions culinaires locales en
+              proposant des plats faits maison, cuisinés avec soin et passion,
+              le tout accompagné de boissons rafraîchissantes.
+            </p>
+            <div class="badge-pils">
+              🍻 Partenaire officiel de vos bons moments avec la PILS nationale
+            </div>
+          </div>
+
+          <div class="about-visual">
+            <h4>Une ambiance unique</h4>
+            <p>
+              Tables personnalisées aux couleurs fraîches de la PILS, grand air,
+              musique togolaise et accueil chaleureux. Rejoignez la communauté
+              des habitués de Kpodzi !
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+       SECTION SERVICES
+       ========================================================================== -->
+    <section id="services">
+      <div class="container">
+        <div class="section-title">
+          <h2>Nos Services</h2>
+          <p>Tout ce qu'il faut pour vous faire passer un excellent moment</p>
+        </div>
+
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-icon">🍽️</div>
+            <h3>Restauration sur Place</h3>
+            <p>
+              Dégustez vos spécialités togolaises préférées sur nos tables
+              aménagées dans un cadre propre et aéré à Kpodzi.
+            </p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon">🍺</div>
+            <h3>Bar & Rafraîchissements</h3>
+            <p>
+              Un large choix de boissons servies à température idéale : PILS
+              bien glacée, castel, sodas et jus locaux.
+            </p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon">⚽</div>
+            <h3>Diffusion d'Événements</h3>
+            <p>
+              Vivez la passion du sport en direct ! Retransmission des grands
+              matchs de football dans une ambiance survoltée.
+            </p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon">📦</div>
+            <h3>Plats à Emporter</h3>
+            <p>
+              Vous êtes pressés ? Commandez à l'avance et emportez vos grillades
+              et repas directement chez vous.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+       SECTION CATALOGUE (REPAS ET BOISSONS)
+       ========================================================================== -->
+    <section id="catalogue">
+      <div class="container">
+        <div class="section-title">
+          <h2>Notre Catalogue</h2>
+          <p>Découvrez nos spécialités culinaires et nos rafraîchissements</p>
+        </div>
+
+        <!-- Radio-boutons cachés pour la gestion des onglets sans JavaScript -->
+        <input
+          type="radio"
+          id="tab-nourriture"
+          name="catalogue-tab"
+          class="tab-radio"
+          checked
+        />
+        <input
+          type="radio"
+          id="tab-boissons"
+          name="catalogue-tab"
+          class="tab-radio"
+        />
+
+        <!-- Boutons de sélection -->
+        <div class="tab-labels">
+          <label for="tab-nourriture" class="tab-label"
+            >🍲 Diverses Nourritures</label
+          >
+          <label for="tab-boissons" class="tab-label"
+            >🍺 Rafraîchissements</label
+          >
+        </div>
+
+        <div class="tab-container">
+          <!-- PANNEAU 1 : NOURRITURES -->
+          <div id="content-nourriture" class="tab-content">
+            <div class="menu-item">
+              <div class="menu-item-header">
+                <h3>Poulet Braisé Spécial</h3>
+                <span class="price">3 500 FCFA</span>
+              </div>
+              <p>
+                Poulet assaisonné aux épices locales, servi avec de l'aloko
+                (banane plantain) ou frites d'igname.
+              </p>
+            </div>
+
+            <div class="menu-item">
+              <div class="menu-item-header">
+                <h3>Pintade Grillée</h3>
+                <span class="price">5 000 FCFA</span>
+              </div>
+              <p>
+                Pintade entière ou demi-pintade braisée au feu de bois,
+                accompagnée d'une sauce pimentée maison.
+              </p>
+            </div>
+
+            <div class="menu-item">
+              <div class="menu-item-header">
+                <h3>Tilapia Grillé de Kpalimé</h3>
+                <span class="price">4 000 FCFA</span>
+              </div>
+              <p>
+                Poisson frais pêché localement, marinée et grillé, accompagné de
+                Banku ou d'Akoume.
+              </p>
+            </div>
+
+            <div class="menu-item">
+              <div class="menu-item-header">
+                <h3>Brochettes de Bœuf (Chawarma)</h3>
+                <span class="price">1 500 FCFA</span>
+              </div>
+              <p>
+                Brochettes de viande bien assaisonnées et tendres, parfaites
+                pour accompagner une boisson.
+              </p>
+            </div>
+          </div>
+
+          <!-- PANNEAU 2 : RAFRAÎCHISSEMENTS -->
+          <div id="content-boissons" class="tab-content">
+            <div class="menu-item">
+              <div class="menu-item-header">
+                <h3>PILS Togolaise (Grand Format)</h3>
+                <span class="price">600 FCFA</span>
+              </div>
+              <p>
+                La bière nationale, servie extrêmement glacée. Le choix
+                incontournable de la 3ème MI-TEMPS !
+              </p>
+            </div>
+
+            <div class="menu-item">
+              <div class="menu-item-header">
+                <h3>Castel Beer / Beaufort</h3>
+                <span class="price">700 FCFA</span>
+              </div>
+              <p>
+                Bières blondes rafraîchissantes pour varier les plaisirs lors de
+                vos soirées.
+              </p>
+            </div>
+
+            <div class="menu-item">
+              <div class="menu-item-header">
+                <h3>Guinness Stout</h3>
+                <span class="price">800 FCFA</span>
+              </div>
+              <p>
+                Bière brune de caractère pour les amateurs de saveurs fortes et
+                soutenues.
+              </p>
+            </div>
+
+            <div class="menu-item">
+              <div class="menu-item-header">
+                <h3>Sodas & Cocktail de Fruits</h3>
+                <span class="price">500 FCFA</span>
+              </div>
+              <p>
+                Sprite, Coca-Cola, Fanta ou jus de fruits locaux de la région
+                des Plateaux.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+       SECTION AVIS
+       ========================================================================== -->
+    <section id="avis">
+      <div class="container">
+        <div class="section-title">
+          <h2>Avis de nos Clients</h2>
+          <p>Ce que disent les habitués du quartier Kpodzi</p>
+        </div>
+
+        <div class="reviews-grid">
+          <div class="review-card">
+            <div class="stars">★★★★★</div>
+            <p>
+              « Le meilleur endroit à Kpodzi pour regarder les matchs du
+              dimanche ! Le poulet braisé est excellent et la PILS est toujours
+              à la bonne température. »
+            </p>
+            <div class="client-info">
+              <h4>Koffi A.</h4>
+              <span>Habitant de Kpalimé</span>
+            </div>
+          </div>
+
+          <div class="review-card">
+            <div class="stars">★★★★★</div>
+            <p>
+              « Accueil très chaleureux, ambiance convivialité garantie. La
+              décoration verte fait vraiment penser à la fraîcheur de Kpalimé.
+              Je recommande ! »
+            </p>
+            <div class="client-info">
+              <h4>Abla M.</h4>
+              <span>Visiteuse de Lomé</span>
+            </div>
+          </div>
+
+          <div class="review-card">
+            <div class="stars">★★★★☆</div>
+            <p>
+              « Un cadre au top et un service rapide même les soirs de week-end.
+              Les brochettes de bœuf sont un vrai régal. »
+            </p>
+            <div class="client-info">
+              <h4>Fifi T.</h4>
+              <span>Client fidèle</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+       SECTION CONTACTS
+       ========================================================================== -->
+    <section id="contacts">
+      <div class="container">
+        <div class="section-title">
+          <h2>Contactez-Nous</h2>
+          <p>Venez nous rendre visite ou passez votre commande</p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-info-box">
+            <h3>Nos Coordonnées</h3>
+
+            <div class="info-item">
+              <div>
+                <strong>📍 Localisation</strong>
+                Quartier Kpodzi, Kpalimé - Togo
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div>
+                <strong>📞 Téléphone / WhatsApp</strong>
+                +228 90 00 00 00 / 99 00 00 00
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div>
+                <strong>🕒 Horaires d'ouverture</strong>
+                Du Lundi au Dimanche : 11h00 - 00h00
+              </div>
+            </div>
+          </div>
+
+          <form
+            class="contact-form"
+            action="#"
+            method="post"
+            onsubmit="return false;"
+          >
+            <div class="form-group">
+              <input type="text" placeholder="Votre Nom" required />
+            </div>
+            <div class="form-group">
+              <input
+                type="tel"
+                placeholder="Votre Numéro de Téléphone"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <textarea
+                rows="4"
+                placeholder="Votre Message ou Réservation..."
+                required
+              ></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">
+              Envoyer le Message
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="container">
+        <p>
+          &copy; 2026 <span>3ème MI-TEMPS</span> - Kpalimé Kpodzi. Tous droits
+          réservés.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
