@@ -12,6 +12,12 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&family=Poppins:wght@300;400;600;700&display=swap"
       rel="stylesheet"
     />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/iconify/3.1.1/iconify.min.js"
+      integrity="sha512-oQ1yQwSEIc9CTcK7pffEyS8fxom2iUWQrALk3j3+wfdSDjQ77EZbzGMGe2ZYmfoC8M9vR47apbS1ZYbW05y/pg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -99,7 +105,8 @@
               le tout accompagné de boissons rafraîchissantes.
             </p>
             <div class="badge-pils">
-              🍻 Partenaire officiel de vos bons moments avec la PILS nationale
+              <span class="iconify" data-icon="noto:beer-mug"></span> Partenaire
+              officiel de vos bons moments avec la PILS nationale
             </div>
           </div>
 
@@ -127,7 +134,13 @@
 
         <div class="services-grid">
           <div class="service-card">
-            <div class="service-icon">🍽️</div>
+            <div class="service-icon">
+              <img
+                src="./assets/icons/tagliatelle pasta-512x512.png"
+                alt=""
+                id="small-icon"
+              />
+            </div>
             <h3>Restauration sur Place</h3>
             <p>
               Dégustez vos spécialités togolaises préférées sur nos tables
@@ -136,7 +149,9 @@
           </div>
 
           <div class="service-card">
-            <div class="service-icon">🍺</div>
+            <div class="service-icon">
+              <span class="iconify" data-icon="noto:beer-mug"></span>
+            </div>
             <h3>Bar & Rafraîchissements</h3>
             <p>
               Un large choix de boissons servies à température idéale : PILS
@@ -145,7 +160,9 @@
           </div>
 
           <div class="service-card">
-            <div class="service-icon">⚽</div>
+            <div class="service-icon">
+              <img src="./assets/icons/soccer ball-512x512 (1).png" alt="" />
+            </div>
             <h3>Diffusion d'Événements</h3>
             <p>
               Vivez la passion du sport en direct ! Retransmission des grands
@@ -154,7 +171,9 @@
           </div>
 
           <div class="service-card">
-            <div class="service-icon">📦</div>
+            <div class="service-icon">
+              <img src="./assets/icons/shopping cart-512x512.png" alt="" />
+            </div>
             <h3>Plats à Emporter</h3>
             <p>
               Vous êtes pressés ? Commandez à l'avance et emportez vos grillades
@@ -193,11 +212,9 @@
         <!-- Boutons de sélection -->
         <div class="tab-labels">
           <label for="tab-nourriture" class="tab-label"
-            >🍲 Diverses Nourritures</label
+            >Diverses Nourritures</label
           >
-          <label for="tab-boissons" class="tab-label"
-            >🍺 Rafraîchissements</label
-          >
+          <label for="tab-boissons" class="tab-label">Rafraîchissements</label>
         </div>
 
         <div class="tab-container">
@@ -238,7 +255,7 @@
 
             <div class="menu-item">
               <div class="menu-item-header">
-                <h3>Brochettes de Bœuf (Chawarma)</h3>
+                <h3>Chawarma</h3>
                 <span class="price">1 500 FCFA</span>
               </div>
               <p>
