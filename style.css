@@ -259,7 +259,7 @@ header .container {
     4rem
   ); /* Astuce Pro : Clamp pour typo réactive automatique */
   margin-bottom: 20px;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   letter-spacing: 2px;
 }
 
@@ -540,11 +540,6 @@ header .container {
 }
 
 .menu-item-header {
-  /* display: flex;
-  flex-wrap: wrap;
-
-  justify-content: space-between;
-  align-items: baseline; */
   display: grid;
   grid-template-columnns: repeat(auto-fit, minmax(300px, 1fr)); 
   margin-bottom: 10px;
@@ -651,8 +646,17 @@ header .container {
   margin-bottom: 20px;
 }
 
+.info-item div {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  gap: 15px;
+}
+
 .info-item strong {
-  display: block;
+  display: flex;
+  gap: 5px;
+  align-items: center;
   color: var(--accent-color);
 }
 
