@@ -146,7 +146,7 @@ header {
   left: 0;
   width: 100%;
   height: var(--header-height);
-  background-color: var(--primary-color);
+  background-color: white;
   box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
   z-index: 1000;
   display: flex;
@@ -164,7 +164,7 @@ header .container {
   font-family: var(--font-heading);
   font-size: clamp(1.5rem, 2vw, 1.8rem);
   font-weight: 800;
-  color: var(--white);
+  color: var(--primary-color);
   display: flex;
   align-items: center;
   gap: 8px;
@@ -180,7 +180,7 @@ header .container {
 }
 
 .nav-links a {
-  color: var(--white);
+  color: var(--primary-color);
   font-weight: 600;
   font-size: 0.95rem;
   position: relative;
@@ -201,7 +201,7 @@ header .container {
 }
 
 .nav-links a:hover {
-  color: var(--accent-color);
+  color: var(--accent-hover);
 }
 
 .nav-links a:hover::after {
@@ -225,7 +225,7 @@ header .container {
 .hamburger span {
   height: 3px;
   width: 100%;
-  background-color: var(--white);
+  background-color: var(--primary-color);
   border-radius: 3px;
   transition: var(--transition-smooth);
 }
@@ -236,13 +236,17 @@ header .container {
 #accueil {
   height: 100vh;
   /* Gradient sombre sur fond vert pour faire ressortir l'ambiance et la typographie */
-  background:
+  /* background:
     linear-gradient(rgba(13, 71, 34, 0.85), rgba(0, 0, 0, 0.7)),
     radial-gradient(
       circle at center,
       var(--primary-light),
       var(--primary-color)
-    );
+    ); */
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url(./assets/pictures/header2.jpeg);
+  background-size: cover;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -534,6 +538,52 @@ header .container {
   border: 1px solid var(--primary-light);
 }
 
+.menu-profil {
+  height: 250px;
+  width: 100%;
+  background-size: cover;
+  border-radius: 15px;
+  margin-bottom: 8px;
+}
+
+#poulet-braise {
+  background-image: url(./assets/pictures/poulet-braisé.jpeg);
+  background-position: center;
+}
+
+#pintade-grille {
+  background-image: url(./assets/pictures/pintade.jpeg);
+}
+
+#tilapia-grille {
+  background-image: url(./assets/pictures/tilapia.jpeg);
+  background-position: bottom;
+}
+
+#chawarma {
+  background-image: url(./assets/pictures/chawarma.jpeg);
+  background-position: center;
+}
+
+#pils {
+  background-image: url(./assets/pictures/pils.jpeg);
+  background-position: bottom;
+}
+
+#beaufort {
+  background-image: url(./assets/pictures/beaufort.jpeg);
+}
+
+#guiness {
+  background-image: url(./assets/pictures/guiness.jpeg);
+  background-position: bottom;
+}
+
+#cocktail {
+  background-image: url(./assets/pictures/youki.jpeg);
+  background-position: bottom;
+}
+
 .menu-item:hover {
   transform: translateY(-8px);
   box-shadow: var(--box-shadow-hover);
@@ -541,7 +591,7 @@ header .container {
 
 .menu-item-header {
   display: grid;
-  grid-template-columnns: repeat(auto-fit, minmax(300px, 1fr)); 
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   margin-bottom: 10px;
 }
 
@@ -581,7 +631,7 @@ header .container {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   position: relative;
-   transition: var(--transition-smooth);
+  transition: var(--transition-smooth);
 }
 
 .review-card:hover {
@@ -718,7 +768,7 @@ footer span {
     top: var(--header-height);
     left: 0;
     width: 100%;
-    background-color: var(--primary-color);
+    background-color: var(--white);
     flex-direction: column;
     align-items: center;
     padding: 5px 0;
@@ -727,6 +777,10 @@ footer span {
     overflow: hidden;
     transition: max-height 0.4s ease-out;
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .nav-links a {
+    color: var(--primary-color);
   }
 
   /* Affichage du menu mobile quand la checkbox est cochée */
@@ -757,5 +811,9 @@ footer span {
 
   .about-text h3 {
     text-align: center;
+  }
+
+  .menu-profil {
+    height: 220px;
   }
 }
