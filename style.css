@@ -208,6 +208,19 @@ header .container {
   width: 100%;
 }
 
+.cta {
+  display: flex;
+  width: max-content;
+  height: 100%;
+  padding: 10px 20px;
+  font-weight: bold;
+  align-items: center;
+  border-radius: 30px;
+  margin-right: 20px;
+  background-color: var(--primary-color);
+  color: var(--white);
+}
+
 /* Checkbox hack (Caché sur PC) */
 .nav-toggle {
   display: none;
@@ -245,8 +258,9 @@ header .container {
     ); */
   background:
     linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url(./assets/pictures/header2.jpeg);
+    url(./assets/pictures/header3.jpeg);
   background-size: cover;
+  background-position: center;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -509,8 +523,8 @@ header .container {
 #tab-nourriture:checked ~ .tab-container #content-nourriture,
 #tab-boissons:checked ~ .tab-container #content-boissons {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
   animation: fadeIn 0.5s ease-in-out;
 }
 
@@ -527,24 +541,38 @@ header .container {
 
 /* Style des cartes du menu */
 .menu-item {
+  scroll-margin-top: calc(var(--header-height) + 19px);
+  text-decoration: none;
   background-color: var(--bg-light);
   border-radius: var(--border-radius);
-  padding: 25px;
   box-shadow: 0 5px 18px rgba(0, 0, 0, 0.03);
-  display: flex;
+  /* display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-evenly; */
   transition: var(--transition-smooth);
   border: 1px solid var(--primary-light);
 }
 
 .menu-profil {
+  display: block;
+  position: relative;
   height: 250px;
   width: 100%;
   background-size: cover;
-  border-radius: 15px;
+  border-radius: 10px;
   margin-bottom: 8px;
 }
+
+/*.menu-profil .close-btn {
+  display: block;
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+} */
 
 #poulet-braise {
   background-image: url(./assets/pictures/poulet-braisé.jpeg);
@@ -553,6 +581,7 @@ header .container {
 
 #pintade-grille {
   background-image: url(./assets/pictures/pintade.jpeg);
+  background-position: center;
 }
 
 #tilapia-grille {
@@ -586,7 +615,7 @@ header .container {
 
 .menu-item:hover {
   transform: translateY(-8px);
-  box-shadow: var(--box-shadow-hover);
+  box-shadow: var(--box-shadow);
 }
 
 .menu-item-header {
@@ -596,6 +625,7 @@ header .container {
 }
 
 .menu-item-header h3 {
+  padding: 10px;
   font-size: 1.15rem;
   color: var(--primary-color);
   margin-bottom: 5px;
@@ -606,12 +636,14 @@ header .container {
   color: var(--primary-light);
   background-color: rgba(241, 184, 20, 0.2);
   padding: 4px 10px;
+  margin-left: 10px;
   border-radius: 20px;
   font-size: 0.9rem;
   width: max-content;
 }
 
 .menu-item p {
+  padding: 0 10px 10px;
   color: var(--text-muted);
   font-size: 0.9rem;
 }
@@ -754,7 +786,7 @@ footer span {
 /* ==========================================================================
    11. MEDIA QUERIES (RESPONSIVE DESIGN)
    ========================================================================== */
-@media (max-width: 768px) {
+@media (max-width: 935px) {
   .hamburger {
     display: flex;
   }
@@ -815,5 +847,11 @@ footer span {
 
   .menu-profil {
     height: 220px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .cta {
+    display: none;
   }
 }
