@@ -258,7 +258,7 @@ header .container {
     ); */
   background:
     linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url(./assets/pictures/header3.jpeg);
+    url(./assets/pictures/header4.jpg);
   background-size: cover;
   background-position: center;
   display: flex;
