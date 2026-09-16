@@ -219,6 +219,12 @@ header .container {
   margin-right: 20px;
   background-color: var(--primary-color);
   color: var(--white);
+  transition: var(--transition-smooth);
+}
+
+.cta:hover {
+  background-color: var(--bg-light);
+  color: var(--primary-color);
 }
 
 /* Checkbox hack (Caché sur PC) */
@@ -358,18 +364,14 @@ header .container {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  background-color: rgba(241, 184, 20, 0.15);
-  border: 1px solid var(--accent-color);
+  background-color: var(--bg-light);
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  /* border: 1px solid var(--primary-light); */
   padding: 10px 18px;
   border-radius: 8px;
   color: var(--primary-color);
   font-weight: 600;
   margin-top: 15px;
-}
-
-.badge-pils svg {
-  height: 25px;
-  width: 25px;
 }
 
 .about-visual {
@@ -425,37 +427,22 @@ header .container {
 .service-icon {
   width: 60px;
   height: 60px;
-  background-color: rgba(13, 71, 34, 0.1);
-  color: var(--primary-color);
+  background-color: var(--primary-color);
+  /* background-color: rgba(13, 71, 34, 0.1); */
+  color: var(--accent-color);
   border-radius: 50%;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content : center;
   font-size: 1.5rem;
   font-weight: bold;
   margin: 0 auto 20px;
   transition: var(--transition-smooth);
 }
 
-.service-icon svg {
-  color: var(--primary-color);
-  height: 60%;
-  width: 60%;
-}
-
-.service-icon img {
-  height: 60%;
-  width: 60%;
-}
-
-.service-icon #small-icon {
-  height: 66%;
-  width: 66%;
-}
-
 .service-card:hover .service-icon {
-  background-color: var(--primary-color);
-  color: var(--accent-color);
+  background-color: var(--accent-color);
+  color: var(--primary-color);
 }
 
 .service-card h3 {
@@ -588,7 +575,7 @@ header .container {
 
 #tilapia-grille {
   background-image: url(./assets/pictures/tilapia.jpeg);
-  background-position: bottom;
+  /* background-position: bottom; */
 }
 
 #chawarma {
@@ -597,22 +584,22 @@ header .container {
 }
 
 #pils {
-  background-image: url(./assets/pictures/pils.jpeg);
-  background-position: bottom;
+  background-image: url(./assets/pictures/pils-beer.png);
+  /* background-position: bottom; */
 }
 
 #beaufort {
-  background-image: url(./assets/pictures/beaufort.jpeg);
+  background-image: url(./assets/pictures/Castel-beer.jpg);
 }
 
 #guiness {
-  background-image: url(./assets/pictures/guiness.jpeg);
-  background-position: bottom;
+  background-image: url(./assets/pictures/guiness-stout-beerwebp.webp);
+  background-position: left;
 }
 
 #cocktail {
-  background-image: url(./assets/pictures/youki.jpeg);
-  background-position: bottom;
+  background-image: url(./assets/pictures/youki-cocktail-fruits.webp);
+  /* background-position: bottom; */
 }
 
 .menu-item:hover {
@@ -647,6 +634,11 @@ header .container {
   width: 25px;
 }
 
+.purchase-box svg:hover{
+  color: var(--accent-color);
+  scale: 1.1;
+}
+
 .price {
   font-weight: 700;
   color: var(--primary-light);
@@ -666,24 +658,26 @@ header .container {
 
 /* ==========================================================================
    9. SECTION AVIS
-   ========================================================================== */
-.reviews-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
+   ========================================================================== */ 
+
+.reviews-container {
+  width: 100%;
+  max-width: 1200px;
 }
 
 .review-card {
+  margin: auto;
+  height: 300px;
+  width: clamp(330px, 29.50vw, 400px);
   background-color: var(--bg-card);
-  padding: 30px;
+  padding: 20px;
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
-  position: relative;
   transition: var(--transition-smooth);
 }
 
 .review-card:hover {
-  transform: translateY(-6px);
+  transform: translateY(-4px);
   box-shadow: var(--box-shadow-hover);
 }
 
