@@ -340,6 +340,8 @@ header .container {
    ========================================================================== */
 #a-propos {
   background-color: var(--white);
+  position: relative;
+  width: fit-content;
 }
 
 .about-grid {
@@ -358,6 +360,7 @@ header .container {
 .about-text p {
   margin-bottom: 15px;
   color: var(--text-muted);
+  text-align: justify;
 }
 
 .badge-pils {
@@ -374,7 +377,8 @@ header .container {
   margin-top: 15px;
 }
 
-.about-visual {
+.about-visual,
+.mobile-description {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -393,7 +397,23 @@ header .container {
   box-shadow: var(--box-shadow);
 }
 
-.about-visual h4 {
+.mobile-description {
+  height: fit-content;
+  box-shadow: none;
+  border-radius: initial;
+  background-position: center;
+  position: relative;
+  bottom: 0;
+  width: 100vw;
+  display: none;
+}
+
+.mobile-description p {
+  width: 85%;
+}
+
+.about-visual h4,
+.mobile-description h4 {
   font-size: 1.5rem;
   margin-bottom: 10px;
   color: var(--accent-color);
@@ -433,7 +453,7 @@ header .container {
   border-radius: 50%;
   display: flex;
   align-items: center;
-  justify-content : center;
+  justify-content: center;
   font-size: 1.5rem;
   font-weight: bold;
   margin: 0 auto 20px;
@@ -471,7 +491,7 @@ header .container {
 /* Style des onglets (labels) */
 .tab-labels {
   display: flex;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   flex-direction: row;
   justify-content: center;
   gap: 15px;
@@ -479,7 +499,8 @@ header .container {
 }
 
 .tab-label {
-  padding: 12px 28px;
+  /* font-size: clamp(10px, 1rem, 1.3rem); */
+  padding: 12px 25px;
   background-color: var(--bg-light);
   color: var(--text-main);
   font-weight: 600;
@@ -634,7 +655,7 @@ header .container {
   width: 25px;
 }
 
-.purchase-box svg:hover{
+.purchase-box svg:hover {
   color: var(--accent-color);
   scale: 1.1;
 }
@@ -654,11 +675,12 @@ header .container {
   padding: 0 10px 10px;
   color: var(--text-muted);
   font-size: 0.9rem;
+  text-align: left;
 }
 
 /* ==========================================================================
    9. SECTION AVIS
-   ========================================================================== */ 
+   ========================================================================== */
 
 .reviews-container {
   width: 100%;
@@ -668,7 +690,7 @@ header .container {
 .review-card {
   margin: auto;
   height: 300px;
-  width: clamp(330px, 29.50vw, 400px);
+  width: clamp(330px, 29.5vw, 400px);
   background-color: var(--bg-card);
   padding: 20px;
   border-radius: var(--border-radius);
@@ -863,5 +885,22 @@ footer span {
 @media screen and (max-width: 640px) {
   .cta {
     display: none;
+  }
+
+  .badge-pils .fa-beer {
+    display: none;
+  }
+
+  .about-visual {
+    display: none;
+  }
+
+  .mobile-description {
+    display: flex;
+    margin-top: 30px;
+  }
+
+  .tab-labels {
+    
   }
 }
