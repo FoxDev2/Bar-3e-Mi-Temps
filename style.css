@@ -146,7 +146,7 @@ header {
   left: 0;
   width: 100%;
   height: var(--header-height);
-  background-color: var(--primary-color);
+  background-color: white;
   box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
   z-index: 1000;
   display: flex;
@@ -164,7 +164,7 @@ header .container {
   font-family: var(--font-heading);
   font-size: clamp(1.5rem, 2vw, 1.8rem);
   font-weight: 800;
-  color: var(--white);
+  color: var(--primary-color);
   display: flex;
   align-items: center;
   gap: 8px;
@@ -180,7 +180,7 @@ header .container {
 }
 
 .nav-links a {
-  color: var(--white);
+  color: var(--primary-color);
   font-weight: 600;
   font-size: 0.95rem;
   position: relative;
@@ -201,11 +201,30 @@ header .container {
 }
 
 .nav-links a:hover {
-  color: var(--accent-color);
+  color: var(--accent-hover);
 }
 
 .nav-links a:hover::after {
   width: 100%;
+}
+
+.cta {
+  display: flex;
+  width: max-content;
+  height: 100%;
+  padding: 10px 20px;
+  font-weight: bold;
+  align-items: center;
+  border-radius: 30px;
+  margin-right: 20px;
+  background-color: var(--primary-color);
+  color: var(--white);
+  transition: var(--transition-smooth);
+}
+
+.cta:hover {
+  background-color: var(--bg-light);
+  color: var(--primary-color);
 }
 
 /* Checkbox hack (Caché sur PC) */
@@ -225,7 +244,7 @@ header .container {
 .hamburger span {
   height: 3px;
   width: 100%;
-  background-color: var(--white);
+  background-color: var(--primary-color);
   border-radius: 3px;
   transition: var(--transition-smooth);
 }
@@ -236,13 +255,18 @@ header .container {
 #accueil {
   height: 100vh;
   /* Gradient sombre sur fond vert pour faire ressortir l'ambiance et la typographie */
-  background:
+  /* background:
     linear-gradient(rgba(13, 71, 34, 0.85), rgba(0, 0, 0, 0.7)),
     radial-gradient(
       circle at center,
       var(--primary-light),
       var(--primary-color)
-    );
+    ); */
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url(./assets/pictures/header4.jpg);
+  background-size: cover;
+  background-position: center;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -316,6 +340,7 @@ header .container {
    ========================================================================== */
 #a-propos {
   background-color: var(--white);
+  position: relative;
 }
 
 .about-grid {
@@ -334,14 +359,16 @@ header .container {
 .about-text p {
   margin-bottom: 15px;
   color: var(--text-muted);
+  text-align: justify;
 }
 
 .badge-pils {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  background-color: rgba(241, 184, 20, 0.15);
-  border: 1px solid var(--accent-color);
+  background-color: var(--bg-light);
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  /* border: 1px solid var(--primary-light); */
   padding: 10px 18px;
   border-radius: 8px;
   color: var(--primary-color);
@@ -349,12 +376,8 @@ header .container {
   margin-top: 15px;
 }
 
-.badge-pils svg {
-  height: 25px;
-  width: 25px;
-}
-
-.about-visual {
+.about-visual,
+.mobile-description {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -373,7 +396,23 @@ header .container {
   box-shadow: var(--box-shadow);
 }
 
-.about-visual h4 {
+.mobile-description {
+  height: fit-content;
+  box-shadow: none;
+  border-radius: initial;
+  background-position: center;
+  position: relative;
+  bottom: 0;
+  width: 100vw;
+  display: none;
+}
+
+.mobile-description p {
+  width: 85%;
+}
+
+.about-visual h4,
+.mobile-description h4 {
   font-size: 1.5rem;
   margin-bottom: 10px;
   color: var(--accent-color);
@@ -407,8 +446,9 @@ header .container {
 .service-icon {
   width: 60px;
   height: 60px;
-  background-color: rgba(13, 71, 34, 0.1);
-  color: var(--primary-color);
+  background-color: var(--primary-color);
+  /* background-color: rgba(13, 71, 34, 0.1); */
+  color: var(--accent-color);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -419,25 +459,9 @@ header .container {
   transition: var(--transition-smooth);
 }
 
-.service-icon svg {
-  color: var(--primary-color);
-  height: 60%;
-  width: 60%;
-}
-
-.service-icon img {
-  height: 60%;
-  width: 60%;
-}
-
-.service-icon #small-icon {
-  height: 66%;
-  width: 66%;
-}
-
 .service-card:hover .service-icon {
-  background-color: var(--primary-color);
-  color: var(--accent-color);
+  background-color: var(--accent-color);
+  color: var(--primary-color);
 }
 
 .service-card h3 {
@@ -466,7 +490,7 @@ header .container {
 /* Style des onglets (labels) */
 .tab-labels {
   display: flex;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   flex-direction: row;
   justify-content: center;
   gap: 15px;
@@ -474,7 +498,8 @@ header .container {
 }
 
 .tab-label {
-  padding: 12px 28px;
+  /* font-size: clamp(10px, 1rem, 1.3rem); */
+  padding: 12px 25px;
   background-color: var(--bg-light);
   color: var(--text-main);
   font-weight: 600;
@@ -505,8 +530,8 @@ header .container {
 #tab-nourriture:checked ~ .tab-container #content-nourriture,
 #tab-boissons:checked ~ .tab-container #content-boissons {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
   animation: fadeIn 0.5s ease-in-out;
 }
 
@@ -523,32 +548,115 @@ header .container {
 
 /* Style des cartes du menu */
 .menu-item {
+  scroll-margin-top: calc(var(--header-height) + 19px);
+  text-decoration: none;
   background-color: var(--bg-light);
   border-radius: var(--border-radius);
-  padding: 25px;
   box-shadow: 0 5px 18px rgba(0, 0, 0, 0.03);
-  display: flex;
+  /* display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-evenly; */
   transition: var(--transition-smooth);
   border: 1px solid var(--primary-light);
 }
 
+.menu-profil {
+  display: block;
+  position: relative;
+  height: 250px;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  margin-bottom: 8px;
+}
+
+/*.menu-profil .close-btn {
+  display: block;
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+} */
+
+#poulet-braise {
+  background-image: url(./assets/pictures/poulet-braisé.jpeg);
+  background-position: center;
+}
+
+#pintade-grille {
+  background-image: url(./assets/pictures/pintade.jpeg);
+  background-position: center;
+}
+
+#tilapia-grille {
+  background-image: url(./assets/pictures/tilapia.jpeg);
+  /* background-position: bottom; */
+}
+
+#chawarma {
+  background-image: url(./assets/pictures/chawarma.jpeg);
+  background-position: center;
+}
+
+#pils {
+  background-image: url(./assets/pictures/pils-beer.png);
+  /* background-position: bottom; */
+}
+
+#beaufort {
+  background-image: url(./assets/pictures/Castel-beer.jpg);
+}
+
+#guiness {
+  background-image: url(./assets/pictures/guiness-stout-beerwebp.webp);
+  background-position: left;
+}
+
+#cocktail {
+  background-image: url(./assets/pictures/youki-cocktail-fruits.webp);
+  /* background-position: bottom; */
+}
+
 .menu-item:hover {
   transform: translateY(-8px);
-  box-shadow: var(--box-shadow-hover);
+  box-shadow: var(--box-shadow);
 }
 
 .menu-item-header {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   margin-bottom: 10px;
 }
 
 .menu-item-header h3 {
+  padding: 10px;
   font-size: 1.15rem;
   color: var(--primary-color);
   margin-bottom: 5px;
+}
+
+.purchase-box {
+  width: 60%;
+  padding: 0 4px 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.purchase-box svg {
+  color: var(--primary-color);
+  height: 25px;
+  width: 25px;
+}
+
+.purchase-box svg:hover {
+  color: var(--accent-color);
+  scale: 1.1;
 }
 
 .price {
@@ -556,36 +664,41 @@ header .container {
   color: var(--primary-light);
   background-color: rgba(241, 184, 20, 0.2);
   padding: 4px 10px;
+  margin-left: 10px;
   border-radius: 20px;
   font-size: 0.9rem;
   width: max-content;
 }
 
 .menu-item p {
+  padding: 0 10px 10px;
   color: var(--text-muted);
   font-size: 0.9rem;
+  text-align: left;
 }
 
 /* ==========================================================================
    9. SECTION AVIS
    ========================================================================== */
-.reviews-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
+
+.reviews-container {
+  width: 100%;
+  max-width: 1200px;
 }
 
 .review-card {
+  margin: auto;
+  height: 300px;
+  width: clamp(330px, 27.5vw, 400px);
   background-color: var(--bg-card);
-  padding: 30px;
+  padding: 20px;
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
-  position: relative;
-   transition: var(--transition-smooth);
+  transition: var(--transition-smooth);
 }
 
 .review-card:hover {
-  transform: translateY(-6px);
+  transform: translateY(-4px);
   box-shadow: var(--box-shadow-hover);
 }
 
@@ -675,6 +788,8 @@ header .container {
   background-color: rgba(255, 255, 255, 0.05);
   color: var(--white);
   font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.4;
 }
 
 .form-group input::placeholder,
@@ -704,7 +819,7 @@ footer span {
 /* ==========================================================================
    11. MEDIA QUERIES (RESPONSIVE DESIGN)
    ========================================================================== */
-@media (max-width: 768px) {
+@media (max-width: 935px) {
   .hamburger {
     display: flex;
   }
@@ -718,7 +833,7 @@ footer span {
     top: var(--header-height);
     left: 0;
     width: 100%;
-    background-color: var(--primary-color);
+    background-color: var(--white);
     flex-direction: column;
     align-items: center;
     padding: 5px 0;
@@ -727,6 +842,10 @@ footer span {
     overflow: hidden;
     transition: max-height 0.4s ease-out;
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .nav-links a {
+    color: var(--primary-color);
   }
 
   /* Affichage du menu mobile quand la checkbox est cochée */
@@ -757,5 +876,32 @@ footer span {
 
   .about-text h3 {
     text-align: center;
+  }
+
+  .menu-profil {
+    height: 220px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .cta {
+    display: none;
+  }
+
+  .badge-pils .fa-beer {
+    display: none;
+  }
+
+  .about-visual {
+    display: none;
+  }
+
+  .mobile-description {
+    display: flex;
+    margin-top: 30px;
+  }
+
+  .tab-labels {
+    
   }
 }
